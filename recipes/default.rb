@@ -1,8 +1,1 @@
-#
-# Cookbook Name:: cespi_server_security
-# Recipe:: default
-#
-# Copyright (C) 2014 YOUR_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
+include_recipe "cespi_server_security::fail2ban" if node.cespi_server_security.fail2ban.enabled
