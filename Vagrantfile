@@ -72,16 +72,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
 
-  config.vm.provision :chef_solo do |chef|
+  config.vm.provision :chef_client do |chef|
+    chef.chef_server_url = "https://chef.desarrollo.unlp.edu.ar"
+    chef.validation_key_path = "../../../.chef/validator.pem"
     chef.json = {
-      mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
-        server_repl_password: 'replpass'
-      }
     }
 
     chef.run_list = [
+        "recipe[cespi_server_base::default]",
         "recipe[cespi_server_security::default]"
     ]
   end
