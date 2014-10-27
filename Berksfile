@@ -1,4 +1,5 @@
 source "https://supermarket.getchef.com"
 
-cookbook 'cespi_server_base', path: '../cespi_server_base/'
+cookbook 'simple_iptables', git: 'https://github.com/rtkwlf/cookbook-simple-iptables.git'
+
 metadata
