@@ -40,6 +40,8 @@ default[:cespi_server_security][:restricted_su][:enabled] = true
 
 ##################################
 # IPtables firewall configuration.
+default["simple_iptables"]["ipv4"]["tables"] = %w(filter)
+default["simple_iptables"]["ipv6"]["tables"] = %w(filter)
 
 # Rules for different protocols
 default[:cespi_server_security][:firewall][:fw_database][:allowed_networks][:networks] = %w(163.10.95.0/24)
