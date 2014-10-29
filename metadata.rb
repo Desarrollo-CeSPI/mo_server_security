@@ -7,5 +7,5 @@ long_description 'Installs/Configures cespi_server_security'
 version          '0.1.5'
 
 depends 'apt'
-depends 'simple_iptables'
-depends 'openssh'
+depends 'simple_iptables',  '~> 0.7.0'
+depends 'openssh',          '~> 1.3.4'
