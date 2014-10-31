@@ -4,7 +4,7 @@ maintainer_email 'car@cespi.unlp.edu.ar lditommaso@cespi.unlp.edu.ar'
 license          'MIT'
 description      'Installs/Configures cespi_server_security'
 long_description 'Installs/Configures cespi_server_security'
-version          '0.1.5'
+version          '0.1.6'
 
 depends 'apt', '~>2.6.0'
 depends 'simple_iptables', '~>0.7.0'
