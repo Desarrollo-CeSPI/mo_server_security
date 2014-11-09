@@ -1,9 +1,9 @@
-name             'cespi_server_security'
+name             'mo_server_security'
 maintainer       'Christian A. Rodriguez & Leandro Di Tommaso'
-maintainer_email 'car@cespi.unlp.edu.ar lditommaso@cespi.unlp.edu.ar'
+maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
 license          'MIT'
-description      'Installs/Configures cespi_server_security'
-long_description 'Installs/Configures cespi_server_security'
+description      'Installs/Configures mo_server_security'
+long_description 'Installs/Configures mo_server_security'
 version          '0.1.6'
 
 depends 'apt', '~>2.6.0'

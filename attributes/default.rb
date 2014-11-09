@@ -1,24 +1,24 @@
 ##########
 # Fail2ban
-default[:cespi_server_security][:fail2ban][:enabled] = true
-default[:cespi_server_security][:fail2ban][:ignoreip] = "127.0.0.1/8"
-default[:cespi_server_security][:fail2ban][:findtime] = "600"
-default[:cespi_server_security][:fail2ban][:bantime] = "600"
-default[:cespi_server_security][:fail2ban][:maxretry] = "3"
-default[:cespi_server_security][:fail2ban][:destemail] = "infra@desarrollo.unlp.edu.ar"
+default[:mo_server_security][:fail2ban][:enabled] = true
+default[:mo_server_security][:fail2ban][:ignoreip] = "127.0.0.1/8"
+default[:mo_server_security][:fail2ban][:findtime] = "600"
+default[:mo_server_security][:fail2ban][:bantime] = "600"
+default[:mo_server_security][:fail2ban][:maxretry] = "3"
+default[:mo_server_security][:fail2ban][:destemail] = "infra@desarrollo.unlp.edu.ar"
 # Specific services
-default[:cespi_server_security][:fail2ban][:ssh][:enabled] = true
-default[:cespi_server_security][:fail2ban][:ssh][:maxretry] = "5"
-default[:cespi_server_security][:fail2ban][:postfix][:enabled] = false
-default[:cespi_server_security][:fail2ban][:courierauth][:enabled] = false
-default[:cespi_server_security][:fail2ban][:sasl][:enabled] = false
+default[:mo_server_security][:fail2ban][:ssh][:enabled] = true
+default[:mo_server_security][:fail2ban][:ssh][:maxretry] = "5"
+default[:mo_server_security][:fail2ban][:postfix][:enabled] = false
+default[:mo_server_security][:fail2ban][:courierauth][:enabled] = false
+default[:mo_server_security][:fail2ban][:sasl][:enabled] = false
 
 
 ######################################
 # SSH service.
 
 # Enable configuration of sshd service
-default[:cespi_server_security][:ssh_config][:enabled] = true
+default[:mo_server_security][:ssh_config][:enabled] = true
 # OpenSSH recipe parameters
 default['openssh']['server']['use_privilege_separation'] = 'yes'
 default['openssh']['server']['permit_root_login'] = 'without-password'
@@ -36,7 +36,7 @@ default['openssh']['server']['use_dns'] = 'no'
 
 ##################################
 # Apply restrictions to su command
-default[:cespi_server_security][:restricted_su][:enabled] = true
+default[:mo_server_security][:restricted_su][:enabled] = true
 
 ##################################
 # IPtables firewall configuration.
@@ -44,11 +44,11 @@ default["simple_iptables"]["ipv4"]["tables"] = %w(filter)
 default["simple_iptables"]["ipv6"]["tables"] = %w(filter)
 
 # Rules for different protocols
-default[:cespi_server_security][:firewall][:fw_database][:allowed_networks][:networks] = %w(163.10.95.0/24)
-default[:cespi_server_security][:firewall][:fw_database][:allowed_networks][:ports] = %w(3306)
-default[:cespi_server_security][:firewall][:fw_http][:allowed_networks][:networks] = %w(0.0.0.0/0)
-default[:cespi_server_security][:firewall][:fw_http][:allowed_networks][:ports] = %w(80 443)
-default[:cespi_server_security][:firewall][:fw_ssh][:allowed_networks][:networks] = %w(163.10.5.192/26 163.10.95.30/32)
-default[:cespi_server_security][:firewall][:fw_ssh][:allowed_networks][:ports] = %w(22)
+default[:mo_server_security][:firewall][:fw_database][:allowed_networks][:networks] = %w(163.10.95.0/24)
+default[:mo_server_security][:firewall][:fw_database][:allowed_networks][:ports] = %w(3306)
+default[:mo_server_security][:firewall][:fw_http][:allowed_networks][:networks] = %w(0.0.0.0/0)
+default[:mo_server_security][:firewall][:fw_http][:allowed_networks][:ports] = %w(80 443)
+default[:mo_server_security][:firewall][:fw_ssh][:allowed_networks][:networks] = %w(163.10.5.192/26 163.10.95.30/32)
+default[:mo_server_security][:firewall][:fw_ssh][:allowed_networks][:ports] = %w(22)
 # ICMP is special
-default[:cespi_server_security][:firewall][:fw_icmp][:allowed_networks][:networks] = %w(0.0.0.0/0)
+default[:mo_server_security][:firewall][:fw_icmp][:allowed_networks][:networks] = %w(0.0.0.0/0)

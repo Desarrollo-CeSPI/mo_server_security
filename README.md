@@ -1,4 +1,4 @@
-# Cookbook: cespi_server_security
+# Cookbook: mo_server_security
 
 This cookbook provides some recipes to secure servers.
 
@@ -25,7 +25,7 @@ Where RECIPE_NAME is the name of the recipe is intended to customize. For exampl
 This recipes can be enabled/disabled/customized setting the appropiate attributes.
 
 * **fail2ban**: installs and sets up Fail2Ban.
-* **restricted_su**: disables su command for users not in the sysadmin group (specified in the cespi_server_base
+* **restricted_su**: disables su command for users not in the sysadmin group (specified in the mo_server_base
   recipe, via authorization.superadmin_group attribute.
 * **ssh_config**: disables password authentication and permits root login using SSH public key only.
 
@@ -60,5 +60,5 @@ For firewall recipes:
 
 ## License and Authors
 
-* Author:: Christian Rodriguez (<car@cespi.unlp.edu.ar>)
-* Author:: Leandro Di Tommaso (<lditommaso@cespi.unlp.edu.ar>)
+* Author:: Christian Rodriguez (<chrodriguez@gmail.com>)
+* Author:: Leandro Di Tommaso (<leandro.ditommaso@mikroways.net>)

@@ -24,8 +24,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       }
       chef.run_list = [
         "recipe[apt::default]",
-        "recipe[cespi_server_security::fw_icmp]",
-        "recipe[cespi_server_security::fw_http]"
+        "recipe[mo_server_security::fw_icmp]",
+        "recipe[mo_server_security::fw_http]"
       ]
     end
   end

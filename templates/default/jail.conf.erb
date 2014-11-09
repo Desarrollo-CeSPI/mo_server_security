@@ -1,11 +1,11 @@
 [DEFAULT]
 
-ignoreip = <%= @node.cespi_server_security.fail2ban.ignoreip %>
-bantime  = <%= @node.cespi_server_security.fail2ban.bantime %>
-findtime = <%= @node.cespi_server_security.fail2ban.findtime %>
-maxretry = <%= @node.cespi_server_security.fail2ban.maxretry %>
+ignoreip = <%= @node.mo_server_security.fail2ban.ignoreip %>
+bantime  = <%= @node.mo_server_security.fail2ban.bantime %>
+findtime = <%= @node.mo_server_security.fail2ban.findtime %>
+maxretry = <%= @node.mo_server_security.fail2ban.maxretry %>
 backend = auto
-destemail = <%= @node.cespi_server_security.fail2ban.destemail %>
+destemail = <%= @node.mo_server_security.fail2ban.destemail %>
 banaction = iptables-multiport
 mta = sendmail
 protocol = tcp
@@ -24,11 +24,11 @@ action = %(action_)s
 
 [ssh]
 
-enabled  = <%= @node.cespi_server_security.fail2ban.ssh.enabled %>
+enabled  = <%= @node.mo_server_security.fail2ban.ssh.enabled %>
 port     = ssh
 filter   = sshd
 logpath  = /var/log/auth.log
-maxretry = <%= @node.cespi_server_security.fail2ban.ssh.maxretry %>
+maxretry = <%= @node.mo_server_security.fail2ban.ssh.maxretry %>
 
 
 [dropbear]
@@ -143,7 +143,7 @@ maxretry = 6
 
 [postfix]
 
-enabled  = <%= @node.cespi_server_security.fail2ban.postfix.enabled %>
+enabled  = <%= @node.mo_server_security.fail2ban.postfix.enabled %>
 port     = smtp,ssmtp
 filter   = postfix
 logpath  = /var/log/mail.log
@@ -159,7 +159,7 @@ logpath  = /var/log/mail.log
 
 [courierauth]
 
-enabled  = <%= @node.cespi_server_security.fail2ban.courierauth.enabled %>
+enabled  = <%= @node.mo_server_security.fail2ban.courierauth.enabled %>
 port     = smtp,ssmtp,imap2,imap3,imaps,pop3,pop3s
 filter   = courierlogin
 logpath  = /var/log/mail.log
@@ -167,7 +167,7 @@ logpath  = /var/log/mail.log
 
 [sasl]
 
-enabled  = <%= @node.cespi_server_security.fail2ban.sasl.enabled %>
+enabled  = <%= @node.mo_server_security.fail2ban.sasl.enabled %>
 port     = smtp,ssmtp,imap2,imap3,imaps,pop3,pop3s
 filter   = sasl
 logpath  = /var/log/mail.log
