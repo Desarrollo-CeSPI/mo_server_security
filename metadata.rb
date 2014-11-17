@@ -4,7 +4,7 @@ maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
 license          'MIT'
 description      'Installs/Configures mo_server_security'
 long_description 'Installs/Configures mo_server_security'
-version          '0.1.7'
+version          '0.1.8'
 
 depends 'apt', '~>2.6.0'
 depends 'simple_iptables', '~>0.7.0'
