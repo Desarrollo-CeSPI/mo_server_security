@@ -32,6 +32,7 @@ default['openssh']['server']['t_c_p_keep_alive'] = 'yes'
 default['openssh']['server']['challenge_response_authentication'] = 'no'
 default['openssh']['server']['use_p_a_m'] = 'yes'
 default['openssh']['server']['use_dns'] = 'no'
+default['openssh']['server']['subsystem'] = "sftp /usr/lib/openssh/sftp-server"
 
 
 ##################################
