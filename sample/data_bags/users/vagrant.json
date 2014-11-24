@@ -1,0 +1,7 @@
+{
+  "id": "vagrant",
+  "groups": [
+    "sysadmin",
+    "devops"
+  ]
+}

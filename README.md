@@ -22,12 +22,17 @@ Where RECIPE_NAME is the name of the recipe is intended to customize. For exampl
 
 ## Recipes
 
-This recipes can be enabled/disabled/customized setting the appropiate attributes.
+### Default
+This recipe enables/disables/customizes settings using the appropiate attributes, for the following services:
 
 * **fail2ban**: installs and sets up Fail2Ban.
 * **restricted_su**: disables su command for users not in the sysadmin group (specified in the mo_server_base
   recipe, via authorization.superadmin_group attribute.
 * **ssh_config**: disables password authentication and permits root login using SSH public key only.
+
+### Sysctl
+
+Sets kernel parameters using attributes specified with `attributes/syscrl`
 
 ### Firewall
 
