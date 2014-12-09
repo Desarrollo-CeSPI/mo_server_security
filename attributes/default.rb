@@ -5,7 +5,7 @@ default[:mo_server_security][:fail2ban][:ignoreip] = "127.0.0.1/8"
 default[:mo_server_security][:fail2ban][:findtime] = "600"
 default[:mo_server_security][:fail2ban][:bantime] = "600"
 default[:mo_server_security][:fail2ban][:maxretry] = "3"
-default[:mo_server_security][:fail2ban][:destemail] = "infra@desarrollo.unlp.edu.ar"
+default[:mo_server_security][:fail2ban][:destemail] = "user@domain"
 # Specific services
 default[:mo_server_security][:fail2ban][:ssh][:enabled] = true
 default[:mo_server_security][:fail2ban][:ssh][:maxretry] = "5"

@@ -62,7 +62,6 @@ For firewall recipes:
 
 * Invoke them directly in the run list. Remember that when doing it, DROP policy in the INPUT will be applied.
 
-
 ## License and Authors
 
 * Author:: Christian Rodriguez (<chrodriguez@gmail.com>)
