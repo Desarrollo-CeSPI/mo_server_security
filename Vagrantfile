@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define 'server', primary: true do |server|
     server.vm.hostname = "server-security.desarrollo.unlp.edu.ar"
-    server.omnibus.chef_version = :latest
+    server.omnibus.chef_version = "11.16.4"
     server.vm.box = "chef/ubuntu-12.04"
     server.vm.network :private_network, ip: "10.99.2.2"
     server.berkshelf.enabled = true

@@ -1,5 +1,7 @@
 DEPENDENCIES
   chef-solo-search
+    git: https://github.com/edelight/chef-solo-search.git
+    revision: 72bd5e3507056e5c931ee0cf7516ce1bfbce6d51
   mo_server_security
     path: .
     metadata: true
@@ -9,7 +11,7 @@ DEPENDENCIES
 
 GRAPH
   apt (2.6.1)
-  chef-solo-search (0.5.1)
+  chef-solo-search (0.5.2)
   chef-sugar (2.4.1)
   hostname (0.3.0)
     hostsfile (>= 0.0.0)
