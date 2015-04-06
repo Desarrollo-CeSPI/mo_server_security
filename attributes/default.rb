@@ -48,19 +48,19 @@ default["simple_iptables"]["ipv6"]["tables"] = %w(filter)
 # Rules for different protocols
 ###############################################################################
 # Mysql DB
-default[:mo_server_security][:firewall][:fw_database][:allowed_networks][:networks] = %w(163.10.95.0/24)
+default[:mo_server_security][:firewall][:fw_database][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_database][:allowed_networks][:ports] = %w(3306)
 #HTTP
-default[:mo_server_security][:firewall][:fw_http][:allowed_networks][:networks] = %w(0.0.0.0/0)
+default[:mo_server_security][:firewall][:fw_http][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_http][:allowed_networks][:ports] = %w(80 443)
 # SSH
-default[:mo_server_security][:firewall][:fw_ssh][:allowed_networks][:networks] = %w(163.10.5.192/26 163.10.95.30/32)
+default[:mo_server_security][:firewall][:fw_ssh][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_ssh][:allowed_networks][:ports] = %w(22)
 #
 # ICMP is special
-default[:mo_server_security][:firewall][:fw_icmp][:allowed_networks][:networks] = %w(0.0.0.0/0)
+default[:mo_server_security][:firewall][:fw_icmp][:allowed_networks][:networks] = []
 
 # Elasticsearch
-default[:mo_server_security][:firewall][:fw_elasticsearch][:allowed_networks][:networks] = %w(163.10.5.192/26 163.10.95.30/32)
+default[:mo_server_security][:firewall][:fw_elasticsearch][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_elasticsearch][:allowed_networks][:ports] = %w(9200)
 
