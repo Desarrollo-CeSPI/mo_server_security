@@ -64,3 +64,7 @@ default[:mo_server_security][:firewall][:fw_icmp][:allowed_networks][:networks] 
 default[:mo_server_security][:firewall][:fw_elasticsearch][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_elasticsearch][:allowed_networks][:ports] = %w(9200)
 
+# Redis
+default[:mo_server_security][:firewall][:fw_redis][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_redis][:allowed_networks][:ports] = %w(6379)
+
