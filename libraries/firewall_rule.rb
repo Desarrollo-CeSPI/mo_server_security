@@ -11,3 +11,9 @@ end
 def rule_for_icmp
   node[:mo_server_security][:firewall][:fw_icmp][:allowed_networks][:networks].map { |x| "-p icmp -s #{x}"}
 end
+
+def all_from(hosts)
+  hosts.map do |x|
+    "-s #{x}/32"
+  end
+end

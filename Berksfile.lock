@@ -7,20 +7,22 @@ DEPENDENCIES
     metadata: true
   simple_iptables
     git: https://github.com/rtkwlf/cookbook-simple-iptables.git
-    revision: 18a4a6bd4f43a5bac305e6bec5b25c127be7189c
+    revision: b24dac719e16b2270ccedf99d6990e74e97d594e
 
 GRAPH
   apt (2.7.0)
+  build-essential (2.2.3)
   chef-solo-search (0.5.2)
   chef-sugar (2.5.0)
   hostname (0.3.0)
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
   iptables (1.0.0)
-  mo_server_base (1.0.0)
+  mo_server_base (1.1.0)
     apt (~> 2.7.0)
     chef-sugar (~> 2.5.0)
     hostname (~> 0.3.0)
+    nrpe (~> 1.5.0)
     ntp (~> 1.6.4)
     postfix (~> 3.6.2)
     resolver (~> 1.2.0)
@@ -28,11 +30,15 @@ GRAPH
     sudo (~> 2.7.1)
     ubuntu (~> 1.0.4)
     users (~> 1.7.0)
-  mo_server_security (1.0.0)
-    mo_server_base (~> 1.0.0)
+  mo_server_security (1.1.0)
+    chef-sugar (~> 2.5.0)
+    mo_server_base (~> 1.1.0)
     openssh (~> 1.3.4)
     simple_iptables (~> 0.7.0)
     sysctl (~> 0.6.0)
+  nrpe (1.5.0)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   ntp (1.6.8)
   ohai (2.0.1)
   openssh (1.3.4)
@@ -47,3 +53,6 @@ GRAPH
   ubuntu (1.0.4)
     apt (>= 0.0.0)
   users (1.7.0)
+  yum (3.6.0)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
