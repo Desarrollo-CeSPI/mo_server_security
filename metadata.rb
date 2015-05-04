@@ -4,7 +4,7 @@ maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
 license          'MIT'
 description      'Installs/Configures mo_server_security'
 long_description 'Installs/Configures mo_server_security'
-version          '1.1.0'
+version          '1.1.1'
 
 depends 'chef-sugar',       '~> 2.5.0'
 depends 'mo_server_base',   '>= 0.0.0'
