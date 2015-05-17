@@ -71,3 +71,8 @@ default[:mo_server_security][:firewall][:fw_redis][:allowed_networks][:ports] = 
 # NRPE (Nagios)
 default[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks][:ports] = %w(5666)
+
+# NFS
+default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:ports] = %w(111 2049)
+
