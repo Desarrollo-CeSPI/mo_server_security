@@ -76,3 +76,7 @@ default[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks][:ports] = %
 default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:ports] = %w(111 2049)
 
+# Carbon
+default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:ports] = %w(2003)
+
