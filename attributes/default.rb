@@ -83,3 +83,6 @@ default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:ports] = %w
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:ports] = %w(2003)
 
+# Syslog
+default[:mo_server_security][:firewall][:fw_syslog][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_syslog][:allowed_networks][:ports] = %w()
