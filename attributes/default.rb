@@ -71,6 +71,9 @@ default[:mo_server_security][:firewall][:fw_redis][:allowed_networks][:ports] = 
 # NRPE (Nagios)
 default[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks][:ports] = %w(5666)
+# NSCA (Nagios)
+default[:mo_server_security][:firewall][:fw_nsca][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_nsca][:allowed_networks][:ports] = %w(5667)
 
 # NFS
 default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:networks] = []
@@ -80,3 +83,10 @@ default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:ports] = %w
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:ports] = %w(2003)
 
+# Syslog
+default[:mo_server_security][:firewall][:fw_syslog][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_syslog][:allowed_networks][:ports] = %w()
+
+# OpenVPN
+default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:ports] = %w(1194)
