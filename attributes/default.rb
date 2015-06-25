@@ -80,3 +80,6 @@ default[:mo_server_security][:firewall][:fw_nfs][:allowed_networks][:ports] = %w
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_carbon][:allowed_networks][:ports] = %w(2003)
 
+# OpenVPN
+default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:ports] = %w(1194)
