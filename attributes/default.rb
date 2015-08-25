@@ -93,4 +93,4 @@ default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:ports] = %w
 
 # SMTP
 default[:mo_server_security][:firewall][:fw_smtp][:allowed_networks][:networks] = []
-default[:mo_server_security][:firewall][:fw_stmp][:allowed_networks][:ports] = %w(25)
+default[:mo_server_security][:firewall][:fw_smtp][:allowed_networks][:ports] = %w(25)
