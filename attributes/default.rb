@@ -90,3 +90,7 @@ default[:mo_server_security][:firewall][:fw_syslog][:allowed_networks][:ports] =
 # OpenVPN
 default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:ports] = %w(1194)
+
+# SMTP
+default[:mo_server_security][:firewall][:fw_smtp][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_stmp][:allowed_networks][:ports] = %w(25)
