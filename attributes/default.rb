@@ -95,6 +95,10 @@ default[:mo_server_security][:firewall][:fw_vpn][:allowed_networks][:ports] = %w
 default[:mo_server_security][:firewall][:fw_smtp][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_smtp][:allowed_networks][:ports] = %w(25)
 
-# SMTP
+# DNS
 default[:mo_server_security][:firewall][:fw_dns][:allowed_networks][:networks] = []
 default[:mo_server_security][:firewall][:fw_dns][:allowed_networks][:ports] = %w(53)
+
+# NTP
+default[:mo_server_security][:firewall][:fw_ntp][:allowed_networks][:networks] = []
+default[:mo_server_security][:firewall][:fw_ntp][:allowed_networks][:ports] = %w(123)
