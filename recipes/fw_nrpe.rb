@@ -1,6 +1,6 @@
 include_recipe "mo_server_security::_fw_basic"
 
-monitoring_hosts = []
+monitoring_hosts = Array(node[:mo_server_security][:firewall][:fw_nrpe][:allowed_networks_external]).to_a
 search(:node, "role:#{node['nrpe']['server_role']}") do |host|
   monitoring_hosts << host['ipaddress']
 end
